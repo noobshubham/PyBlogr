@@ -1,3 +1,8 @@
-from fastapi import FastApi
+import asyncio
+from fastapi import FastAPI
 
-app = FastApi()
+app = FastAPI()
+
+@app.get('/')
+async def home():
+    return "The PyBlogr API is UP! Maintained and Developed by SHUBHAM."
