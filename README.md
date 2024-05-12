@@ -29,6 +29,13 @@ Install all dependencies listed in _requirements.txt_ file.
    python -m uvicorn app:app --reload
    ```
 
+Rename the `sample_ini` to `.ini`.
+
+[Get your Atlas cluster](https://docs.atlas.mongodb.com/getting-started/) with [sample data](https://docs.atlas.mongodb.com/sample-data/) set [connection string](https://docs.atlas.mongodb.com/connect-to-cluster/) and place in `DB_URI` parameter under `.ini`
+
+Make sure you have IP in the Atlas [access list](https://docs.atlas.mongodb.com/security/add-ip-address-to-list/) and username/password of your Atlas user correctly specified.
+
+
 Resources
 ----------
 
