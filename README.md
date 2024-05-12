@@ -3,12 +3,6 @@ PyBlogr
 
 "PyBlogr" is a Python-based RESTful API project designed to create, manage, and interact with blog posts. It leverages the FastAPI framework for efficient development and stores data in a MongoDB database. Users can perform CRUD operations on blog posts, comment on posts, and like/dislike them, all through a simple and intuitive API interface
 
-
-Usage
----------
-
-Send a get request to the events endpoint.
-
 For more information, [Documentation](https://pyblogr.onrender.com/docs)
 
 
