@@ -7,7 +7,7 @@ router = APIRouter()
 blog_service = BlogService()
 
 @router.get("/posts", response_model=List[Post])
-async def get_posts():
+async def get_all_posts():
     return await blog_service.get_all_posts()
 
 @router.get("/posts/{post_id}", response_model=Post)
