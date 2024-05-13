@@ -1,6 +1,4 @@
-from pydantic import BaseModel, Field
-import uuid
-from bson import ObjectId
+from pydantic import BaseModel
 
 class Post(BaseModel):
     title: str
@@ -26,7 +24,6 @@ class Post(BaseModel):
 class Comment(BaseModel):
     text: str
     author: str
-    # post_id: str
 
     class Config:
         arbitrary_types_allowed = True
@@ -34,7 +31,7 @@ class Comment(BaseModel):
             'examples': [
                 {
                     "text": "Your Comment!",
-                    "author": "Commentetor's Name"
+                    "author": "Name of the Commentator"
                 }
             ]
         }
