@@ -1,5 +1,6 @@
 from database.models import Comment
 from config.config import blogs_collection
+from bson import ObjectId
 
 class CommentService:
     async def get_comments_for_post(self, post_id: str):
@@ -12,8 +13,8 @@ class CommentService:
         return await blogs_collection.comments.find_one({"_id": result.inserted_id})
 
     async def update_comment(self, comment_id: str, comment: Comment):
-        await blogs_collection.comments.replace_one({"_id": comment_id}, comment.model_dump)
-        return await blogs_collection.comments.find_one({"_id": comment_id})
+        await blogs_collection.comments.replace_one({"_id": ObjectId(comment_id)}, comment.dict())
+        return await blogs_collection.comments.find_one({"_id": ObjectId(comment_id)})
 
     async def delete_comment(self, comment_id: str):
         await blogs_collection.comments.delete_one({"_id": comment_id})

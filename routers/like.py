@@ -1,5 +1,4 @@
-from fastapi import APIRouter, HTTPException
-from database.models import Like
+from fastapi import APIRouter
 from services.like_service import LikeService
 
 router = APIRouter()
