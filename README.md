@@ -7,9 +7,9 @@ PyBlogr
 Usage
 ---------
 
-Send a get request to the blogs endpoint.
+Send a get request to the posts endpoint.
 
-Example - https://pyblogr.onrender.com/docs/posts
+Example - https://pyblogr.onrender.com/posts
 
 For more information, [Documentation](https://pyblogr.onrender.com/docs)
 
@@ -19,20 +19,22 @@ Response Format
 This is how the JSON Object in response appears. 
 
 ```JSON
-{
-   "title": "Musical Post",
-   "content": "Honthon Pe Bas.",
-   "author": "Kumar Sanu",
-   "likes": 10,
-   "dislikes": 2
-},
-{
-   "title": "Musical Post",
-   "content": "Tu Hi Meri Sab Hai",
-   "author": "KK",
-   "likes": 8,
-   "dislikes": 2
-}
+[
+   {
+      "title": "Musical Post",
+      "content": "Honthon Pe Bas.",
+      "author": "Kumar Sanu",
+      "likes": 10,
+      "dislikes": 2
+   },
+   {
+      "title": "Musical Post",
+      "content": "Tu Hi Meri Sab Hai",
+      "author": "KK",
+      "likes": 8,
+      "dislikes": 2
+   }
+]
 ```
 
 
