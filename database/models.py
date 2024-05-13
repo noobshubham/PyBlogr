@@ -1,5 +1,6 @@
 from pydantic import BaseModel, Field
 import uuid
+from bson import ObjectId
 
 class Post(BaseModel):
     title: str
@@ -23,19 +24,18 @@ class Post(BaseModel):
         }
 
 class Comment(BaseModel):
-    id: str = Field(default_factory=uuid.uuid4, alias="_id")
     text: str
     author: str
-    post_id: str
+    # post_id: str
 
     class Config:
         arbitrary_types_allowed = True
-        # json_encoders = {ObjectId: str}
+        json_schema_extra = {
+            'examples': [
+                {
+                    "text": "Your Comment!",
+                    "author": "Commentetor's Name"
+                }
+            ]
+        }
 
-class Like(BaseModel):
-    id: str = Field(default_factory=uuid.uuid4, alias="_id")
-    post_id: str
-
-    class Config:
-        arbitrary_types_allowed = True
-        # json_encoders = {ObjectId: str}
